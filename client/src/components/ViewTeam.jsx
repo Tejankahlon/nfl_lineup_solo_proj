@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+
 
 const ViewTeam = () => {
 
@@ -67,7 +69,7 @@ if (!team.QB) {
 
   return (
     <div>
-      <h1>Update Your Team</h1>
+      <h1>Update Your Team</h1> <Link to = "/">Home</Link>
 
         <form onSubmit={handleSubmit}>
           <div>

@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+
 
 const CreateTeam = () => {
 
@@ -40,7 +42,7 @@ const handleChange = (e) => {
 
   return (
     <div>
-      <h1>Create Your Team</h1>
+      <h1>Create Your Team</h1> <Link to = "/">Home</Link>
 
         <form onSubmit={handleSubmit}>
           <div>

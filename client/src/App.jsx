@@ -21,5 +21,3 @@ function App() {
 }
 
 export default App
-
-// done just do styling now

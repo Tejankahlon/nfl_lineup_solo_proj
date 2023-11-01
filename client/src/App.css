@@ -1,4 +1,3 @@
-/* From App.css */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,9 +5,10 @@
   text-align: center;
 }
 
-/* From common.css */
-body {
+body, html {
   font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to right, #ff6666, #9933ff);
 }
 
 .button {
@@ -21,5 +21,5 @@ body {
 .container {
   margin: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: none;
 }

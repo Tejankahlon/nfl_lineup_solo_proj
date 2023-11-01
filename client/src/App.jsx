@@ -1,9 +1,9 @@
-import { useState } from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import DisplayTeams from './components/DisplayTeams'
 import ViewTeam from './components/ViewTeam'
 import CreateTeam from './components/CreateTeam'
+import './common.css'
 
 function App() {
 

@@ -4,6 +4,44 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: '30px',
+  },
+  form: {
+    width: '300px',
+    border: '1px solid black',
+    borderRadius: '10px',
+    padding: '20px',
+    backgroundColor: '#f4f4f4',
+  },
+  inputGroup: {
+    display: 'flex',
+    flexDirection: 'column',
+    marginBottom: '10px',
+  },
+  button: {
+    alignSelf: 'center',
+    padding: '10px 20px',
+    backgroundColor: '#333',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+  },
+  link: {
+    alignSelf: 'center',
+    marginTop: '10px',
+  },
+  errorMessage: {
+    color: 'red',
+    fontSize: '12px',
+    marginTop: '5px',
+  },
+};
 
 const CreateTeam = () => {
 
@@ -41,74 +79,74 @@ const handleChange = (e) => {
 }
 
   return (
-    <div>
-      <h1>Create Your Team</h1> <Link to = "/">Home</Link>
+    <div style={styles.container}>
+      <h1>Create Your Team</h1> <Link style={styles.link} to = "/">Home</Link>
 
-        <form onSubmit={handleSubmit}>
-          <div>
+        <form style={styles.form} onSubmit={handleSubmit}>
+          <div style={styles.inputGroup}>
           <label htmlFor="QB">QB:</label>
           <input type="text" id ="QB" name='QB' onChange={handleChange}/>
           {
-            error.QB ? <p>{error.QB.message}</p> : null
+            error.QB ? <p style={styles.errorMessage}>{error.QB.message}</p> : null
           }
           </div>
-          <div>
+          <div style={styles.inputGroup}>
           <label htmlFor="RB1">RB1:</label>
           <input type="text" id ="RB1" name='RB1' onChange={handleChange}/>
           {
-            error.RB1 ? <p>{error.RB1.message}</p> : null
+            error.RB1 ? <p style={styles.errorMessage}>{error.RB1.message}</p> : null
           }
           </div>
-          <div>
+          <div style={styles.inputGroup}>
           <label htmlFor="RB2">RB2:</label>
           <input type="text" id ="RB2" name='RB2' onChange={handleChange}/>
           {
-            error.RB2 ? <p>{error.RB2.message}</p> : null
+            error.RB2 ? <p style={styles.errorMessage}>{error.RB2.message}</p> : null
           }
           </div>
-          <div>
+          <div style={styles.inputGroup}>
           <label htmlFor="WR1">WR1:</label>
           <input type="text" id ="WR1" name='WR1' onChange={handleChange}/>
           {
-            error.WR1 ? <p>{error.WR1.message}</p> : null
+            error.WR1 ? <p style={styles.errorMessage}>{error.WR1.message}</p> : null
           }
           </div>
-          <div>
+          <div style={styles.inputGroup}>
           <label htmlFor="WR2">WR2:</label>
           <input type="text" id ="WR2" name='WR2' onChange={handleChange}/>
           {
-            error.WR2 ? <p>{error.WR2.message}</p> : null
+            error.WR2 ? <p style={styles.errorMessage}>{error.WR2.message}</p> : null
           }
           </div>
-          <div>
+          <div style={styles.inputGroup}>
           <label htmlFor="TE">TE:</label>
           <input type="text" id ="TE" name='TE' onChange={handleChange}/>
           {
-            error.TE ? <p>{error.TE.message}</p> : null
+            error.TE ? <p style={styles.errorMessage}>{error.TE.message}</p> : null
           }
           </div>
-          <div>
+          <div style={styles.inputGroup}>
           <label htmlFor="WRT">W/R/T:</label>
           <input type="text" id ="WRT" name='WRT' onChange={handleChange}/>
           {
-            error.WRT ? <p>{error.WRT.message}</p> : null
+            error.WRT ? <p style={styles.errorMessage}>{error.WRT.message}</p> : null
           }
           </div>
-          <div>
+          <div style={styles.inputGroup}>
           <label htmlFor="K">K:</label>
           <input type="text" id ="K" name='K' onChange={handleChange}/>
           {
-            error.K ? <p>{error.K.message}</p> : null
+            error.K ? <p style={styles.errorMessage}>{error.K.message}</p> : null
           }
           </div>
-          <div>
+          <div style={styles.inputGroup}>
           <label htmlFor="DEF">DEF:</label>
           <input type="text" id ="DEF" name='DEF' onChange={handleChange}/>
           {
-            error.DEF ? <p>{error.DEF.message}</p> : null
+            error.DEF ? <p style={styles.errorMessage}>{error.DEF.message}</p> : null
           }
           </div>
-          <button>Submit</button>
+          <button style={styles.button} >Submit</button>
         </form>
 
 

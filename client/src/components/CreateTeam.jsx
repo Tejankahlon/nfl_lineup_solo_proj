@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import img from '../assets/football_logo.png'
+
 
 const styles = {
   container: {
@@ -80,9 +82,9 @@ const handleChange = (e) => {
 
   return (
     <div style={styles.container}>
-      <h1>Create Your Team</h1> <Link style={styles.link} to = "/">Home</Link>
-
-        <form style={styles.form} onSubmit={handleSubmit}>
+      <img src={img} alt="Football Logo" className='mb-4' />
+      <h1>Let's Build!</h1> <Link style={styles.link} to = "/">Home</Link> 
+        <form style={styles.form} onSubmit={handleSubmit}> 
           <div style={styles.inputGroup}>
           <label htmlFor="QB">QB:</label>
           <input type="text" id ="QB" name='QB' onChange={handleChange}/>
@@ -148,7 +150,6 @@ const handleChange = (e) => {
           </div>
           <button style={styles.button} >Submit</button>
         </form>
-
 
     </div>
   )

@@ -65,6 +65,7 @@ useEffect(() => {
   axios.get(`http://localhost:8000/api/team/${id}`)
     .then(res => {
       if (res.data && res.data.Team) {
+        console.log(res);
         console.log(res.data.Team);
         setTeam(res.data.Team);
     } else {
